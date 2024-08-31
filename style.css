@@ -1,0 +1,144 @@
+:root {
+  --primaryFont: "Montserrat", system-ui;
+  --secondaryFont: "Fraunces", system-ui;
+  --darkCyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  --veryDarkBlue: hsl(212, 21%, 14%);
+  --darkGrayishBlue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: var(--primaryFont);
+  font-weight: 300;
+  font-size: 14px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  font-family: var(--secondaryFont);
+  margin-bottom: 15px;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  background-color: var(--cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  width: 600px;
+  display: flex;
+  flex-direction: row;
+}
+
+.card-img .desktop {
+  max-width: 300px;
+  height: 100%;
+  border-radius: 10px 0 0 10px;
+}
+.card-img .mobile {
+  display: none;
+}
+.card .card-body {
+  background-color: var(--white);
+  padding: 30px;
+  border-radius: 0 10px 10px 0;
+}
+
+.card h6 {
+  font-family: var(--primaryFont);
+  color: var(--darkGrayishBlue);
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.card .card-body h2 {
+  color: var(--veryDarkBlue);
+  font-weight: 900;
+  font-size: 35px;
+}
+.card .card-body p {
+  font-family: var(--primaryFont);
+  color: var(--darkGrayishBlue);
+  font-weight: 500;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.card .card-body .price-section {
+  font-family: var(--secondaryFont);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 5px;
+  padding-bottom: 10px;
+}
+
+.card .card-body .price-section h2 {
+  color: var(--darkCyan);
+}
+
+.card .card-body .price-section h5 {
+  color: var(--darkGrayishBlue);
+  font-size: 15px;
+  margin-left: 20px;
+  text-decoration: line-through;
+}
+
+.card .card-body button {
+  background-color: var(--darkCyan);
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 15px 0;
+  border-radius: 10px;
+  color: var(--white);
+  font-weight: 700;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  body {
+    max-width: 400px;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 10px;
+    align-items: normal;
+  }
+  .card .card-img {
+  }
+
+  .card .card-img .desktop {
+    display: none;
+  }
+
+  .card .card-img .mobile {
+    display: block;
+    max-width: 100%;
+    border-radius: 10px 10px 0 0;
+  }
+}
